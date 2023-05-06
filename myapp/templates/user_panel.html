@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>User Panel</h1>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action active">
+                    Home
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                    Chat with Admin
+                </a>
+                <a href="{% url 'logout' %}" class="list-group-item list-group-item-action">
+                    Log Out
+                </a>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">User
+                        <p class="card-text">Welcome {{ user.get_full_name }}!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+    
